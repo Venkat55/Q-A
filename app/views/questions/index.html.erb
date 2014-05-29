@@ -1,0 +1,14 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<h1>Questions</h1>
+	<div id="accordion" class="panel-group">
+		<% @questions.each do |q| %>
+			<div class="panel panel-default">
+				<%= q.question %>
+				<%= link_to "See Answers", answers_path(question_id: q.id)  %>
+				<%= link_to "Write an Answer", new_answer_path(question_id: q.id )  %><br/>
+			</div>
+		<% end %>
+	</div>
+	<br/><br/><br/>
+	<%= link_to "Ask a question", new_question_path%>
+</div>
