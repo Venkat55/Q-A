@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
 
 	def index
 		@questions = Question.all
+		@answers = @answers = Answer.where("question_id = ?", params[:question_id])
 	end
 
 	def new

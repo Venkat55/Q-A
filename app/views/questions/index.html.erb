@@ -4,11 +4,14 @@
 		<% @questions.each do |q| %>
 			<div class="panel panel-default">
 				<%= q.question %>
-				<%= link_to "See Answers", answers_path(question_id: q.id)  %>
-				<%= link_to "Write an Answer", new_answer_path(question_id: q.id )  %><br/>
+			</div>
+			<div>
+				<br/>
+				<%= link_to "See Answers", answers_path(question_id: q.id), :class => "btn btn-info"  %>
+				<%= link_to "Write an Answer", new_answer_path(question_id: q.id ), :class => "btn btn-info" %><br/><br/>
 			</div>
 		<% end %>
 	</div>
 	<br/><br/><br/>
-	<%= link_to "Ask a question", new_question_path%>
+	<%= link_to "Ask a question", new_question_path, :class => "btn btn-info" %>
 </div>

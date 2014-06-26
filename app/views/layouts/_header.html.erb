@@ -1,24 +1,18 @@
-<div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+<div role="navigation" class="navbar application-header navbar-fixed-top">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">Project name</a>
+        <div class="application-header">
+            <%= link_to "Q-A", root_path, :class => "navbar-brand heading" %>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Help</a></li>
+                <% if current_user %>
+                <li class="user_name">Signed in as <%= current_user.email %></li>
+                <li><%= link_to "sign out", destroy_user_session_path, :class => "btn btn-info", :method => :delete %></li>
+                <% else %>
+                <li><%= link_to "sign in", new_user_session_path, :class => "btn btn-info" %></li>
+                <li><%= link_to "sign up", new_user_registration_path, :class => "btn btn-info" %></li>
+                <% end %>
             </ul>
-            <form class="navbar-form navbar-right">
-                <!-- <input type="text" placeholder="Search..." class="form-control"> -->
-            </form>
         </div>
     </div>
 </div>
