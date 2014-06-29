@@ -30,8 +30,8 @@ group :doc do
 end
 gem 'devise'
 
+gem 'pg'
 group :development do
-  gem 'pg'
 	gem 'pry'
 	gem 'pry-doc'
 	gem 'pry-rails'
