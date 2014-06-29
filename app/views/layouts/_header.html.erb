@@ -4,7 +4,7 @@
             <%= link_to "Q-A", root_path, :class => "navbar-brand heading" %>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right space">
                 <% if current_user %>
                 <li class="user_name">Signed in as <%= current_user.email %></li>
                 <li><%= link_to "sign out", destroy_user_session_path, :class => "btn btn-info", :method => :delete %></li>

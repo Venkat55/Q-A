@@ -31,6 +31,7 @@ end
 gem 'devise'
 
 gem 'pg'
+gem 'rolify'
 group :development do
 	gem 'pry'
 	gem 'pry-doc'
