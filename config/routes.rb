@@ -5,7 +5,9 @@ QAndA::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root :to => 'questions#index'
-  resources :questions
+  resources :questions do
+    get 'my_questions' => 'questions#my_questions'
+  end
   resources :answers
   # post 
   # Example of regular route:

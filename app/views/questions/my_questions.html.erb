@@ -1,9 +1,8 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-	<h1>Questions</h1>
-	<%= link_to "Ask a question", new_question_path, :class => "btn btn-info" %>
-	<%= link_to "My question", question_my_questions_path(@questions), :class => "btn btn-info" %>
+	<h1>My Questions</h1>
+	<%= link_to "All Questions", root_path, :class => "btn btn-info" %>
 	<div id="accordion" class="panel-group">
-		<% @questions.each do |q| %>
+		<% @my_questions.each do |q| %>
 			<div class="panel panel-default">
 				<%= q.question %>
 			</div>
@@ -15,4 +14,5 @@
 		<% end %>
 	</div>
 	<br/><br/><br/>
+	<%#= link_to "Ask a question", new_question_path, :class => "btn btn-info" %>
 </div>
