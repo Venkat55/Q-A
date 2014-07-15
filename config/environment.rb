@@ -3,7 +3,7 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the Rails application.
 QAndA::Application.initialize!
- config.action_mailer.smtp_settings = {
+ ActionMailer::Base.smtp_settings = {
     :enable_starttls_auto => true,
     :address => "smtp.sendgrid.net",
     :port => 587,
@@ -12,4 +12,3 @@ QAndA::Application.initialize!
     :user_name =>"akshaysimha",
     :password => "simha1991"
   }
-end
