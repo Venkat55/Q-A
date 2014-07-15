@@ -24,6 +24,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -33,10 +37,10 @@ gem 'devise'
 gem 'pg'
 gem 'rolify'
 group :development do
-	gem 'pry'
-	gem 'pry-doc'
-	gem 'pry-rails'
-	gem 'pry-debugger'
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-rails'
+  gem 'pry-debugger'
 end
 
 group :production do

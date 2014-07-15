@@ -2,8 +2,12 @@ class QuestionsController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@questions = Question.all
 		@answers = Answer.where("question_id = ?", params[:question_id])
+
+		@search = Question.search do
+			fulltext params[:search] 
+		end
+		@questions = @search.results
 	end
 
 	def new
