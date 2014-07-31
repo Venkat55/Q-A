@@ -24,8 +24,6 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'sunspot_rails'
-gem 'sunspot_solr'
 gem 'progress_bar'
 
 group :doc do
